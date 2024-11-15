@@ -28,8 +28,8 @@ public class CohereService implements ICohereService {
     
 	private static final String COHERE_API_URL = "https://api.cohere.ai/generate";
 	private static final String COHERE_API_KEY = "hlKdCGADTFU6Mc8zEwqdojIK6pet1cN16S3Fo0l0"; 
-	private String mejorar= "Mejora esta historia y devuelve solo el contenido en un lenguaje claro y fluido, sin agregar títulos o comentarios adicionales respetando la historia:";
-	private String continuar= "Necesito que me continues con la historia con no mas de 20 palabras, dejandolo abierto para que yo pueda continuarla";
+	private String mejorar= "Mejora esta historia y devuelve solo el contenido en un lenguaje claro y fluido, sin agregar títulos o comentarios adicionales respetando la historia.";
+	private String continuar= "Continúa la historia con un máximo de 30 palabras. Asegúrate de mantener coherencia con lo escrito, sin repetir frases anteriores, y deja un desenlace abierto para seguir desarrollándola.";
 	@Override
 	 public String continuarHistoria(RequestCohere request) {
 	        // Configura los encabezados de la solicitud
@@ -112,7 +112,7 @@ public class CohereService implements ICohereService {
 					e.printStackTrace();
 				}
 	        	
-	        	 String completo =text;
+	        	 String completo = text;
 	        
 	        return completo;
 	    }
