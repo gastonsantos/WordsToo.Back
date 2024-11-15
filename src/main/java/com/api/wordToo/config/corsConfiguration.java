@@ -11,7 +11,6 @@ public class corsConfiguration implements WebMvcConfigurer {
 	            .allowedOrigins(
 	                "http://localhost:3000",
 	                "https://words-too-eq93.vercel.app"
-	         
 	            )
 	            .allowedMethods("GET", "POST", "PUT", "DELETE")
 	            .allowedHeaders("Content-Type", "Authorization", "Access-Control-Allow-Origin")
