@@ -24,7 +24,7 @@ public class CohereService implements ICohereService {
 	private RestTemplate restTemplate;
 
 	private static final String COHERE_API_URL = "https://api.cohere.ai/generate";
-	private static final String COHERE_API_KEY = "hlKdCGADTFU6Mc8zEwqdojIK6pet1cN16S3Fo0l0"; 
+	private static final String COHERE_API_KEY = ""; 
 	private String mejorar= "Mejora esta historia y devuelve solo el contenido en un lenguaje claro y fluido, sin agregar títulos o comentarios adicionales respetando la historia:";
 	private String continuar= "Necesito que me continues con la historia con no mas de 20 palabras, dejandolo abierto para que yo pueda continuarla";
 	@Override
