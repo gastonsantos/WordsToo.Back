@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -22,7 +23,9 @@ import com.api.wordToo.model.RequestCohere;
 public class CohereService implements ICohereService {
 	@Autowired
 	private RestTemplate restTemplate;
-
+	
+	
+    
 	private static final String COHERE_API_URL = "https://api.cohere.ai/generate";
 	private static final String COHERE_API_KEY = "hlKdCGADTFU6Mc8zEwqdojIK6pet1cN16S3Fo0l0"; 
 	private String mejorar= "Mejora esta historia y devuelve solo el contenido en un lenguaje claro y fluido, sin agregar títulos o comentarios adicionales respetando la historia:";
