@@ -10,9 +10,8 @@ public class corsConfiguration implements WebMvcConfigurer {
 	    registry.addMapping("/**")
 	            .allowedOrigins(
 	                "http://localhost:3000",
-	                "https://pintureria-front.vercel.app",
-	                "https://pintureria-front-b42wsuwca-gastonsantos-projects.vercel.app",
-	                "https://pintureria-front-olutiwsy9-gastonsantos-projects.vercel.app"
+	                "https://words-too-eq93.vercel.app"
+	         
 	            )
 	            .allowedMethods("GET", "POST", "PUT", "DELETE")
 	            .allowedHeaders("Content-Type", "Authorization", "Access-Control-Allow-Origin")
