@@ -1,0 +1,9 @@
+com\api\wordToo\config\SecurityConfig.class
+com\api\wordToo\service\CohereService.class
+com\api\wordToo\controller\CohereController.class
+com\api\wordToo\model\RequestCohere.class
+com\api\wordToo\config\apiConfig.class
+com\api\wordToo\WordTooApplication.class
+com\api\wordToo\service\ICohereService.class
+com\api\wordToo\model\Contenido.class
+com\api\wordToo\config\corsConfiguration.class

@@ -1,0 +1,12 @@
+C:\Users\Gaston\desktop\wordToo\src\main\java\com\api\wordToo\config\apiConfig.java
+C:\Users\Gaston\desktop\wordToo\src\main\java\com\api\wordToo\config\ApplicationCongig.java
+C:\Users\Gaston\desktop\wordToo\src\main\java\com\api\wordToo\config\corsConfiguration.java
+C:\Users\Gaston\desktop\wordToo\src\main\java\com\api\wordToo\config\SecurityConfig.java
+C:\Users\Gaston\desktop\wordToo\src\main\java\com\api\wordToo\controller\ChatController.java
+C:\Users\Gaston\desktop\wordToo\src\main\java\com\api\wordToo\controller\CohereController.java
+C:\Users\Gaston\desktop\wordToo\src\main\java\com\api\wordToo\model\Contenido.java
+C:\Users\Gaston\desktop\wordToo\src\main\java\com\api\wordToo\model\RequestCohere.java
+C:\Users\Gaston\desktop\wordToo\src\main\java\com\api\wordToo\service\CohereService.java
+C:\Users\Gaston\desktop\wordToo\src\main\java\com\api\wordToo\service\ICohereService.java
+C:\Users\Gaston\desktop\wordToo\src\main\java\com\api\wordToo\service\OpenAiClient.java
+C:\Users\Gaston\desktop\wordToo\src\main\java\com\api\wordToo\WordTooApplication.java
