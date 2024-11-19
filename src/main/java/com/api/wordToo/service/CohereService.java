@@ -24,10 +24,13 @@ public class CohereService implements ICohereService {
 	@Autowired
 	private RestTemplate restTemplate;
 	
-	
+	 @Value("${cohere.api.url}")
+	    private  String apiUrl;
+
+	 @Value("${cohere.api.key}")
+	    private  String apiKey;
     
-	private static final String COHERE_API_URL = "https://api.cohere.ai/generate";
-	private static final String COHERE_API_KEY = "hlKdCGADTFU6Mc8zEwqdojIK6pet1cN16S3Fo0l0"; 
+	
 	private String mejorar= "Mejora esta historia y devuelve solo el contenido en un lenguaje claro y fluido, sin agregar títulos o comentarios adicionales respetando la historia.";
 	private String continuar= "Continúa la historia con un máximo de 30 palabras. Asegúrate de mantener coherencia con lo escrito, sin repetir frases anteriores, y deja un desenlace abierto para seguir desarrollándola.";
 	@Override
@@ -36,7 +39,7 @@ public class CohereService implements ICohereService {
 		 	String text = null;
 	        HttpHeaders headers = new HttpHeaders();
 	        headers.setContentType(MediaType.APPLICATION_JSON);
-	        headers.set("Authorization", "Bearer " + COHERE_API_KEY);
+	        headers.set("Authorization", "Bearer " + apiKey);
 
 	        // Configura el cuerpo de la solicitud
 	        Map<String, Object> body = new HashMap<>();
@@ -49,7 +52,7 @@ public class CohereService implements ICohereService {
 
 	        // Realiza la solicitud a Cohere
 	        ResponseEntity<String> response = restTemplate.exchange(
-	                COHERE_API_URL,
+	        		apiUrl,
 	                HttpMethod.POST,
 	                entity,
 	                String.class
@@ -79,7 +82,7 @@ public class CohereService implements ICohereService {
 		 	String text = null;
 	        HttpHeaders headers = new HttpHeaders();
 	        headers.setContentType(MediaType.APPLICATION_JSON);
-	        headers.set("Authorization", "Bearer " + COHERE_API_KEY);
+	        headers.set("Authorization", "Bearer " + apiKey);
 
 	        // Configura el cuerpo de la solicitud
 	        Map<String, Object> body = new HashMap<>();
@@ -92,7 +95,7 @@ public class CohereService implements ICohereService {
 
 	        // Realiza la solicitud a Cohere
 	        ResponseEntity<String> response = restTemplate.exchange(
-	                COHERE_API_URL,
+	        		apiUrl,
 	                HttpMethod.POST,
 	                entity,
 	                String.class
