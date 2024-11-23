@@ -37,9 +37,10 @@ public class SecurityConfig {
             .sessionManagement(sessionManager -> sessionManager
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS) // No usar sesiones
             )
-            .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
+            .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class) // Filtrar después de esta regla
             .build();
     }
+
 
     @Bean
     public UrlBasedCorsConfigurationSource corsConfigurationSource() {
@@ -52,4 +53,5 @@ public class SecurityConfig {
         source.registerCorsConfiguration("/**", config);
         return source;
     }
+
 }
