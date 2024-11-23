@@ -25,17 +25,6 @@ public class SecurityConfig {
         this.jwtAuthenticationFilter = jwtAuthenticationFilter;
     }
 
-    @Bean
-    public CorsFilter corsFilter() {
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        CorsConfiguration config = new CorsConfiguration();
-        config.setAllowCredentials(true);
-        config.setAllowedOrigins(Arrays.asList("http://localhost:3000", "https://words-too-eq93.vercel.app"));
-        config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization", "Access-Control-Allow-Origin"));
-        config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
-        source.registerCorsConfiguration("/**", config);
-        return new CorsFilter(source);
-    }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -43,7 +32,7 @@ public class SecurityConfig {
             .cors(cors -> cors.configurationSource(corsConfigurationSource())) // Habilitar CORS
             .csrf(csrf -> csrf.disable()) // Deshabilitar CSRF porque usamos JWT
             .authorizeHttpRequests(authRequest -> authRequest
-                .requestMatchers("/api/cohere/generar-token").permitAll() // Permitir acceso sin autenticación
+                .requestMatchers("/api/jwt/**").permitAll() // Permitir acceso sin autenticación
                 .anyRequest().authenticated() // Requerir autenticación para las demás rutas
             )
             .sessionManagement(sessionManager -> sessionManager

@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import io.jsonwebtoken.Jwts;
@@ -13,15 +12,15 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @Service
 public class JwtService implements IJwtService {
 	
-	 @Value("${secret.key.jwt}")
-	    private  String SECRET_KEY;
+	     @Value("${secret.key.jwt}")
+	    private String SECRET_KEY;
 	  
 
 	    public String generateToken(Map<String, Object> claims) {
 	        return Jwts.builder()
 	                .setClaims(claims)
 	                .setIssuedAt(new Date())
-	                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10)) 
+	                .setExpiration(new Date(System.currentTimeMillis() + 60 * 1000)) 
 	              
 	                .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
 	                .compact();
