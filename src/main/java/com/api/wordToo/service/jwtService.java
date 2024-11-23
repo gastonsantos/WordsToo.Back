@@ -15,13 +15,14 @@ public class JwtService implements IJwtService {
 	
 	 @Value("${secret.key.jwt}")
 	    private  String SECRET_KEY;
-	  //private final String SECRET_KEY = "1542665998895323233565644103356999884123332232";
+	  
 
 	    public String generateToken(Map<String, Object> claims) {
 	        return Jwts.builder()
 	                .setClaims(claims)
 	                .setIssuedAt(new Date())
-	                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10)) // Token válido por 10 horas
+	                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10)) 
+	              
 	                .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
 	                .compact();
 	    }
