@@ -10,4 +10,5 @@ com\api\wordToo\service\IJwtService.class
 com\api\wordToo\jwt\JwtAuthenticationFilter.class
 com\api\wordToo\service\JwtService.class
 com\api\wordToo\config\apiConfig.class
+com\api\wordToo\controller\JwtController.class
 com\api\wordToo\service\ICohereService.class

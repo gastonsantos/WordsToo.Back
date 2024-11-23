@@ -4,6 +4,7 @@ C:\Users\Gaston\Desktop\wordToo\src\main\java\com\api\wordToo\config\corsConfigu
 C:\Users\Gaston\Desktop\wordToo\src\main\java\com\api\wordToo\config\SecurityConfig.java
 C:\Users\Gaston\Desktop\wordToo\src\main\java\com\api\wordToo\controller\ChatController.java
 C:\Users\Gaston\Desktop\wordToo\src\main\java\com\api\wordToo\controller\CohereController.java
+C:\Users\Gaston\Desktop\wordToo\src\main\java\com\api\wordToo\controller\JwtController.java
 C:\Users\Gaston\Desktop\wordToo\src\main\java\com\api\wordToo\jwt\JwtAuthenticationFilter.java
 C:\Users\Gaston\Desktop\wordToo\src\main\java\com\api\wordToo\model\Contenido.java
 C:\Users\Gaston\Desktop\wordToo\src\main\java\com\api\wordToo\model\RequestCohere.java
