@@ -22,7 +22,7 @@ public class SecurityConfig {
         return http
             .csrf(csrf -> csrf.disable()) // Deshabilitar CSRF porque usamos JWT
             .authorizeHttpRequests(authRequest -> authRequest
-                .requestMatchers("/api/cohere/generar-token").permitAll() // Permitir acceso sin autenticación
+                .requestMatchers("/api/jwt/**").permitAll() // Permitir acceso sin autenticación
                 .anyRequest().authenticated() // Requerir autenticación para las demás rutas
             )
             .sessionManagement(sessionManager -> sessionManager

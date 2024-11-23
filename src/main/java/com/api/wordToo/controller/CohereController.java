@@ -35,13 +35,13 @@ public class CohereController {
 	}
 	
    
-
+/*
     @GetMapping("/generar-token")
     public ResponseEntity<String> generateToken() {
         String token = _authService.generateToken();
         return ResponseEntity.ok(token);
     }
-    
+    */
     @PostMapping(value="/continuarHistoria")
 	public String continuarHistoria(@RequestBody RequestCohere request) {
 		return _cohereService.continuarHistoria(request);
