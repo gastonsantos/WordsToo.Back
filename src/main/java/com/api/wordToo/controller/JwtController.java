@@ -25,6 +25,10 @@ public class JwtController {
 	  @GetMapping("/generar-token")
 	    public ResponseEntity<String> generateToken() {
 	        String token = _authService.generateToken();
-	        return ResponseEntity.ok(token);
+	        return ResponseEntity.ok()
+	                .header("Access-Control-Allow-Origin", "http://localhost:3000") // Cabecera CORS manual
+	                .body(token);
 	    }
+	  
+	
 }
