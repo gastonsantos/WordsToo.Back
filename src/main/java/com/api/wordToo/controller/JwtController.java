@@ -21,7 +21,11 @@ public class JwtController {
 		
 		this._authService = _authService;
 	}
-	
+	@GetMapping("/generar-token")
+	public ResponseEntity<String> generateToken() {
+	    return ResponseEntity.ok("test-token");
+	}
+/*
 	  @GetMapping("/generar-token")
 	    public ResponseEntity<String> generateToken() {
 	        String token = _authService.generateToken();
@@ -29,6 +33,6 @@ public class JwtController {
 	                .header("Access-Control-Allow-Origin", "http://localhost:3000") // Cabecera CORS manual
 	                .body(token);
 	    }
-	  
+	  */
 	
 }

@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class corsConfiguration implements WebMvcConfigurer {
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
-	    /*registry.addMapping("/**")
+	    registry.addMapping("/**")
 	            .allowedOrigins(
 	                "http://localhost:3000",
 	                "https://words-too-eq93.vercel.app"
@@ -15,6 +15,6 @@ public class corsConfiguration implements WebMvcConfigurer {
 	            .allowedMethods("GET", "POST", "PUT", "DELETE")
 	            .allowedHeaders("Content-Type", "Authorization")
 	            .allowCredentials(true);
-	*/
+	
 	}
 }
