@@ -13,7 +13,7 @@ public class corsConfiguration implements WebMvcConfigurer {
 	                "https://words-too-eq93.vercel.app"
 	            )
 	            .allowedMethods("GET", "POST", "PUT", "DELETE")
-	            .allowedHeaders("Content-Type", "Authorization", "Access-Control-Allow-Origin")
+	            .allowedHeaders("Content-Type", "Authorization")
 	            .allowCredentials(true);
 	}
 }
