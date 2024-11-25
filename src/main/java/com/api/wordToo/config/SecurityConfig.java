@@ -8,7 +8,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import com.api.wordToo.jwt.JwtAuthenticationFilter;
 
-@Configuration
+//@Configuration
 public class SecurityConfig {
 
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
@@ -22,7 +22,7 @@ public class SecurityConfig {
         return http
             .csrf(csrf -> csrf.disable()) // Deshabilitar CSRF porque usamos JWT
             .authorizeHttpRequests(authRequest -> authRequest
-                .requestMatchers("/api/jwt/**").permitAll() // Permitir acceso sin autenticación
+                .requestMatchers("/api/**").permitAll() // Permitir acceso sin autenticación
                 //.requestMatchers(org.springframework.http.HttpMethod.OPTIONS, "/api/jwt/**").permitAll() //
                 .anyRequest().authenticated() // Requerir autenticación para las demás rutas
             )
