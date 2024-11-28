@@ -88,7 +88,7 @@ public class CohereService implements ICohereService {
 	        Map<String, Object> body = new HashMap<>();
 	        body.put("prompt",  mejorar + "el Contenido es: "+request.getContenido());
 	        body.put("model", "command-r-plus");  // Modelo de ejemplo
-	        body.put("max_tokens", 50); // Controla el número de tokens generados
+	        body.put("max_tokens", 300); // Controla el número de tokens generados
 	        body.put("temperature", 0.5); // Controla la creatividad de la respuesta
 
 	        HttpEntity<Map<String, Object>> entity = new HttpEntity<>(body, headers);
